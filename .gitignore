@@ -20,7 +20,6 @@ development/hf_config.py
 development/wandb_configs
 pretrained_models
 
-data/*.zip
 data/taxid2embedding_dist2LCA=False_ambig=max_rank2dist=False_dim=768_metric=True_maxiter=10000_eps=NaN_ninit=1_2026-04-17.json
 
 *slurm-*
