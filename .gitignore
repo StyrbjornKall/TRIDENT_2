@@ -2,6 +2,8 @@
 .venv
 .conda
 .ipython
+.ruff_cache
+*cache*
 
 # Repo specific
 development/figures/figures_for_publication/
