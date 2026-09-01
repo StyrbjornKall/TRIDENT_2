@@ -6,6 +6,8 @@
 *cache*
 wandb/
 .netrc
+*models/
+tmp/
 
 # Repo specific
 development/figures/figures_for_publication/
