@@ -13,8 +13,8 @@ done
 # for id in fz52v4b8;
 #     do
 #     uv run ./scripts/run_posthoc_evaluation.py \
-#         --wandb_entity_name StyrbjornKall \
-#         --wandb_project_name tox_across_species \
+#     --wandb_entity_name $WANDB_ENTITY_NAME \
+#     --wandb_project_name $WANDB_PROJECT_NAME \
 #         --wandb_run_id $id \
 #         --resume_run True
 # done

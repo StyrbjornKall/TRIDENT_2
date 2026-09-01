@@ -3,6 +3,7 @@ name = "trident-2"
 version = "0.2.0"
 description = "Repo for training and evaluating TRIDENT-2, a large language model for toxicology data."
 readme = "README.md"
+license = { file = "LICENSE" }
 requires-python = ">=3.11,<3.14"
 dependencies = [
     "cirpy>=1.0.2",

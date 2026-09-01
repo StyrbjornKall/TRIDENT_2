@@ -4,8 +4,8 @@
     "kfold_stratification_identifier": null,
     "twoway_split": false,
     "seed": 42,
-    "save_dir": "/storage_i/skall/tox_data/results/leo_bench_adore",
-    "data_dir": "/home/skall/TRIDENT_2/data/adore_mortality_processed_20260303.pkl.zip",
+    "save_dir": "leo_bench_adore",
+    "data_dir": "data/adore_mortality_processed_20260303.pkl.zip",
     "butina_dir": null,
 
     "preprocess_data": true,

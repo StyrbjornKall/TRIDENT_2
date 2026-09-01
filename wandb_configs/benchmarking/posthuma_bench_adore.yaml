@@ -24,15 +24,15 @@ parameters:
 
   # directories
   save_dir: 
-    value: /nobackup/proj/disk/snic2022-22-552/personal/skall/run_outputs
+    value: ./run_outputs
   data_dir: 
-    value: /home/skall/TRIDENT_2/data/adore_mortality_processed_20260303.pkl.zip
+    value: data/adore_mortality_processed_20260303.pkl.zip
   taxonomic_embedding_dict:
-    value: /home/skall/TRIDENT_2/data/taxid2embedding_dist2LCA=False_ambig=max_rank2dist=False_dim=768_metric=True_maxiter=10000_eps=NaN_ninit=1_2026-04-17.json
+    value: data/taxid2embedding_dist2LCA=False_ambig=max_rank2dist=False_dim=768_metric=True_maxiter=10000_eps=NaN_ninit=1_2026-04-17.json
   taxonomic_parent_dict:
     value: null
   taxonomic_tree:
-    value: /home/skall/TRIDENT_2/data/taxonomy_tree_SK_2026-04-17.nwk
+    value: .data/taxonomy_tree_SK_2026-04-17.nwk
   butina_dir:
     value: null
 
