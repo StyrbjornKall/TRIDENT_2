@@ -1,0 +1,212 @@
+# sweep
+method: grid
+metric:
+  goal: minimize
+  name: Best Validation Median Loss Normalized
+name: unknown_chemicals_butina03_100ep
+
+parameters:
+  fold_id:
+    values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  seed:
+    values: [42]
+
+  k_folds: 
+    value: 10
+  kfold_identifier: 
+    value: ["butina_cluster"]
+  kfold_stratification_identifier: 
+    value: null
+  device: 
+    value: cuda:0
+
+  # directories
+  save_dir: 
+    value: run_outputs
+  data_dir: 
+    value: data/preprocessed_tox_data_SK_2026-04-17.csv.zip
+  taxonomic_embedding_dict:
+    value: data/taxid2embedding_dist2LCA=False_ambig=max_rank2dist=False_dim=768_metric=True_maxiter=10000_eps=NaN_ninit=1_2026-04-17.json
+  taxonomic_parent_dict:
+    value: data/taxid2parent.json
+  taxonomic_tree:
+    value: data/taxonomy_tree_SK_2026-04-17.nwk
+  butina_dir:
+    value: data/butina_clusters_1024_3.csv
+
+  # data:
+  preprocess_data:
+    value: False
+  endpoints:
+    value: ["EC50", "EC10", "NOEC", "LOEC"]
+  effects:
+    value: ["MOR", "BEH", "CAR", "REP", "GRO", "PHY", "ITX", "POP", "DVP", "MPH"]
+  species_groups:
+    value: null
+  lifestages: 
+    value: null
+  administration_routes:
+    value: null
+  butina_cutoff:
+    value: 0.3
+  concentration_units:
+    value: null
+  columns_to_onehot_encode: 
+    value: ["conc_unit","duration_missing"]
+
+  # training_data:
+  smiles_column:
+    value: "SMILES_Canonical_RDKit"
+  token_metadata_columns:
+    value: [
+      "effect",
+      "administration_route_categorized",
+      "organism_lifestage_categorized"
+      ]
+  taxid_column:
+    value: "NCBI_last_known_rank"
+  embedding_columns:
+    value: null
+  duration_column: 
+    value: "duration"
+  onehot_column: 
+    value: "onehot_encoding"
+  label_column: 
+    value: "conc"
+  feature_column:
+    value: null
+  endpoint_column: 
+    value: "endpoint"
+  embedding_dim: 
+    value: 768
+
+  # Augmentation/batching
+  shuffle_smiles_prob:
+    value: 1.0
+  drop_metadata_prob:
+    value: 0.1
+  lower_taxonomic_rank_prob:
+    value: 0.0
+  max_len: 
+    value: 150
+  padding: 
+    value: "longest"
+  truncation: 
+    value: "only_first"
+  train_batch_size: 
+    value: 256
+  val_batch_size: 
+    value: 2048
+  num_workers: 
+    value: 8
+  pin_memory: 
+    value: True
+
+  # hyperparameters:
+  training_sampler:
+    value: "WeightedRandomSampler"
+  validation_sampler:
+    value: "SequentialSampler"
+  stratification_method:
+    value: "sqrt"
+  sampler_weight_args:
+    value: [
+      "SMILES_Canonical_RDKit",
+      "effect",
+      "endpoint",
+      "species_group_corrected"
+    ]
+  lr: 
+    value: 5e-5
+  epochs: 
+    value: 100
+  loss_function: 
+    value: L1Loss
+  mixed_precision_training:
+    value: True
+  beta1:
+    value: 0.9
+  beta2:
+    value: 0.999
+  weight_decay:
+    value: 0.01
+  reinitialize_encoders:
+    value: False
+  layerwise_learning_rate_decay:
+    value: False
+  constrain_endpoint_order:
+    value: True
+  apply_taxonomic_ranking_loss:
+    value: True
+  lambda_hier:
+    value: 0.05
+
+  # model_parameters:
+  base_model: 
+    value: StyrbjornKall/Multimodal-ChemBERTa-1
+  fusion_network_config: 
+    parameters:
+      activation: 
+        value: GELU
+      dropout: 
+        value: 0.2
+      hidden_layer_sizes: 
+        value: null
+      n_outputs: 
+        value: 300
+  regression_task_config:
+    parameters: 
+      EC50:
+        parameters:
+          activation: 
+            value: GELU
+          dropout: 
+            value: 0.2
+          hidden_layer_sizes: 
+            value: null
+          n_outputs: 
+            value: 1
+      EC10:
+        parameters:
+          activation: 
+            value: GELU
+          dropout: 
+            value: 0.2
+          hidden_layer_sizes: 
+            value: null
+          n_outputs: 
+            value: 1
+      NOEC:
+        parameters:
+          activation: 
+            value: GELU
+          dropout: 
+            value: 0.2
+          hidden_layer_sizes: 
+            value: null
+          n_outputs: 
+            value: 1
+      LOEC:
+        parameters:
+          activation: 
+            value: GELU
+          dropout: 
+            value: 0.2
+          hidden_layer_sizes: 
+            value: null
+          n_outputs: 
+            value: 1
+
+  # save_config:
+  log_to_wandb: 
+    value: true
+  save_best_model: 
+    value: false
+  save_results: 
+    value: true
+  save_final_epoch: 
+    value: true
+  manual_save_at_epochs: 
+    value: [70]
+  delete_models_after_run: 
+    value: true

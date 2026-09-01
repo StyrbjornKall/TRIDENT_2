@@ -1,0 +1,109 @@
+{
+  "seed": 42,
+  "device": "cuda:0",
+
+  "save_dir": "run_outputs",
+  "data_dir": "data/preprocessed_tox_data_SK_2026-04-17.csv.zip",
+  "taxonomic_embedding_dict": "data/taxid2embedding_dist2LCA=False_ambig=max_rank2dist=False_dim=768_metric=True_maxiter=10000_eps=NaN_ninit=1_2026-04-17.json",
+  "taxonomic_parent_dict": "data/taxid2parent.json",
+  "taxonomic_tree": "data/taxonomy_tree_SK_2026-04-17.nwk",
+  "butina_dir": "data/butina_clusters_1024_3.csv",
+
+  "preprocess_data": false,
+  "endpoints": ["EC50", "EC10", "NOEC", "LOEC"],
+  "effects": ["MOR", "BEH", "CAR", "REP", "GRO", "PHY", "ITX", "POP", "DVP", "MPH"],
+  "species_groups": null,
+  "lifestages": null,
+  "administration_routes": null,
+  "butina_cutoff": 0.2,
+  "concentration_units": null,
+  "columns_to_onehot_encode": ["conc_unit","duration_missing"],
+
+  "smiles_column": "SMILES_Canonical_RDKit",
+  "token_metadata_columns": [
+      "effect",
+      "administration_route_categorized",
+      "organism_lifestage_categorized"
+      ],
+  "taxid_column": "NCBI_last_known_rank",
+  "embedding_columns": null,
+  "duration_column": "duration",
+  "onehot_column": "onehot_encoding",
+  "label_column": "conc",
+  "feature_column": null,
+  "endpoint_column": "endpoint",
+  "embedding_dim": 768,
+
+  "shuffle_smiles_prob": 1.0,
+  "drop_metadata_prob": 0.1,
+  "lower_taxonomic_rank_prob": 0.0,
+  "max_len": 150,
+  "padding": "longest",
+  "truncation": "only_first",
+  "train_batch_size": 256,
+  "val_batch_size": 2048,
+  "num_workers": 8,
+  "pin_memory": true,
+
+  "training_sampler": "WeightedRandomSampler",
+  "validation_sampler": "SequentialSampler",
+  "stratification_method": "sqrt",
+  "sampler_weight_args": [
+      "SMILES_Canonical_RDKit",
+      "effect",
+      "endpoint",
+      "species_group_corrected"
+    ],
+  "lr": 5e-5,
+  "epochs": 100,
+  "loss_function": "L1Loss",
+  "mixed_precision_training": true,
+  "beta1": 0.9,
+  "beta2": 0.999,
+  "weight_decay": 0.01,
+  "reinitialize_encoders": 0,
+  "layerwise_learning_rate_decay": false,
+  "constrain_endpoint_order": true,
+  "apply_taxonomic_ranking_loss": true,
+  "lambda_hier": 0.05,
+  
+  "base_model": "StyrbjornKall/Multimodal-ChemBERTa-1",
+  "fusion_network_config": {
+      "activation": "GELU",
+      "dropout": 0.2,
+      "hidden_layer_sizes": null,
+      "n_outputs": 300
+    },
+  "regression_task_config": {
+      "EC50": {
+        "activation": "GELU",
+        "dropout": 0.2,
+        "hidden_layer_sizes": null,
+        "n_outputs": 1
+      },
+      "EC10": {
+        "activation": "GELU",
+        "dropout": 0.2,
+        "hidden_layer_sizes": null,
+        "n_outputs": 1
+      },
+      "NOEC": {
+        "activation": "GELU",
+        "dropout": 0.2,
+        "hidden_layer_sizes": null,
+        "n_outputs": 1
+      },
+      "LOEC": {
+        "activation": "GELU",
+        "dropout": 0.2,
+        "hidden_layer_sizes": null,
+        "n_outputs": 1
+      }
+    },
+
+  "log_to_wandb": true,
+  "save_best_model": false,
+  "save_results": true,
+  "save_final_epoch": true,
+  "manual_save_at_epochs": [70]
+}

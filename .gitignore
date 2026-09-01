@@ -4,9 +4,13 @@
 .ipython
 .ruff_cache
 *cache*
+wandb/
+.netrc
 
 # Repo specific
 development/figures/figures_for_publication/
+
+run_outputs/
 
 TRIDENT/
 development/tokenizer/

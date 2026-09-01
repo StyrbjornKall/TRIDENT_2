@@ -1,0 +1,26 @@
+{
+    "k_folds": 10,
+    "kfold_identifier": ["SMILES_Canonical_RDKit", "NCBI_rank_species"],
+    "kfold_stratification_identifier": null,
+    "twoway_split": false,
+    "seed": 42,
+    "save_dir": "/storage_i/skall/tox_data/results/leo_bench_adore",
+    "data_dir": "/home/skall/TRIDENT_2/data/adore_mortality_processed_20260303.pkl.zip",
+    "butina_dir": null,
+
+    "preprocess_data": true,
+    "endpoints": ["EC50"],
+    "effects": [
+      "MOR",
+      "GRO", 
+      "PHY", 
+      "ITX", 
+      "POP" 
+    ],
+    "concentration_units": null,
+    "smiles_col_name": "SMILES_Canonical_RDKit",
+    "log_data": true,
+    "turn_duration_units_other_than_hours_to_nan": false,
+    "fill_missing_taxonomy": false
+  }
+  
