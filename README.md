@@ -25,16 +25,14 @@ Here you can interact with the model without coding experience to predict chemic
 
 ```
 .
-├── data/                          # Pre-processed toxicology data, taxonomy dicts, MDS embeddings, Butina cluster CSVs
+├── data/                          # Pre-processed toxicology data, taxonomy dicts, Butina cluster CSVs
 ├── jobs/                          # launch shell scripts
-├── scripts/                       # launch shell scripts
+├── scripts/                       
 │   ├── run_experiment.py          # Single-fold training run
-│   ├── hyperparameter_sweep.py    # W&B agent for hyperparameter sweeps
 │   ├── kfold_cross_validation_sweep.py  # W&B agent for k-fold CV sweeps
 │   ├── train_final_model.py       # Train the final production model on all data
-│   ├── train_adore.py             # Train on the ADORE benchmark dataset
-│   ├── train_leo_bench.py         # LibFM-based Leo benchmark
-│   ├── run_inference.py           # Batch inference with a trained checkpoint
+│   ├── train_adore.py             # Generate kfold validation results the ADORE dataset
+│   ├── train_leo_bench.py         # LibFM-based Posthuma et al 2025 benchmark on the ADORE dataset
 │   └── run_posthoc_evaluation.py  # Re-evaluate a finished run
 ├── src/
 │   └── trident2/                  # Library code (importable as `trident2.*`)
