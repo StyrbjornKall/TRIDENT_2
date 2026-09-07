@@ -1,0 +1,21 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.env
+.conda
+.config
+.etetoolkit
+.cache
+data/*db
+
+# Slurms and logs
+slurm-*.out
+logs/
+tmp/

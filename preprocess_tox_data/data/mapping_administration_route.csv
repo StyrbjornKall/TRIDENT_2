@@ -1,0 +1,61 @@
+﻿TERM;DESCRIPTION;CATEGORY
+--;Unspecified;
+S;;static
+oral;;oral
+R;;renewal
+intraperitoneal;;intraperitoneal
+EN;;environmental
+F;;flow_through
+SP;;spray
+intravenous;;intravenous
+FD;;food
+DA;;direct_application
+HS;;spray
+subcutaneous;;subcutaneous
+GV;;gavage
+inhalation;;inhalation
+CM;;culture_media
+GS;;spray
+FS;;spray
+E;Applied in static waters...;static
+GG;;granular
+TP;;topical
+FU;;inhalation
+DT;;food
+IP;;intraperitoneal
+IM;;intramuscular
+SO;;soaking
+dermal;;dermal
+OR;;oral
+DR;;drinking
+CH;;oral
+DR;;oral
+LC;;oral
+OM;;oral
+DM;;dermal
+IV;;intravenous
+P;Pulse;renewal
+PR;;environmental
+SC;;subcutaneous
+intramuscular;;intramuscular
+IVT;;in_vitro
+O;Flowing water system, such as streams;environmental
+AS;;spray
+IJ;;injection
+GM;;culture_media
+L;drain away from soil, ash, or similar material by the action of percolating liquid, especially rainwater;environmental
+IC;Exposed via the air sac or air cell of an organism;injection
+parenteral;;parenteral
+AQ;Aqueous;static
+MM;immersion;soaking
+oral: gavage;;gavage
+oral: feed;;food
+inhalation: vapour;;inhalation
+oral: drinking water;;drinking
+administration onto the skin;;dermal
+oral: unspecified;;oral
+oral: diet;;food
+inhalation: aerosol;;inhalation
+inhalation: unspecified;;inhalation
+inhalation: gas;;inhalation
+chemical added to tank with water (dissolved in water);;static

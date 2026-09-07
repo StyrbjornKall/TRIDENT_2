@@ -1,0 +1,138 @@
+﻿TERM;DESCRIPTION;CATEGORY
+--;Unspecified;
+AD;Adult;Adult
+AL;Alevin;Early
+BD;Bud or Budding;
+BL;Blastula;Early
+BS;Bud blast stage;
+BT;Boot;
+CC;Cocoon;Mid
+CM;Corm;
+CO;Copepodid;Early
+CP;Copepodite;Mid
+CS;Cleavage stage;Early
+CY;Cyst;
+EG;Egg;Early
+EL;Elver;Mid
+EM;Embryo;Early
+EX;Exponential growth phase;
+EY; Eyed egg or stage;Early
+F0;F0 generation;
+F1;F1 generation;
+F11;F11 generation;
+F2;F2 generation;
+F3;F3 generation;
+F6;F6 generation;
+F7;F7 generation;
+FB;Mature (full-bloom stage) organism;
+FG;Female gametophyte;
+FI;Fingerling;Mid
+FO;Flower opening;
+FT;Froglet;Mid
+FY;Fry;Mid
+GA;Gastrula;Early
+GE;Gestation;Early
+GL;Glochidia;Mid
+GM;Gamete;Early
+GP;Lag growth phase;
+GPS;Grain or seed formation stage;
+GS;Germinated seed;
+HD;Heading;
+IB;Incipient bud;
+IE;Internode elongation;
+IG;Imago;Adult
+IM;Immature;Mid
+IN;Instar;Mid
+IT;Intermolt;Mid
+JN;Jointing;
+JV;Juvenile;Mid
+LC;Lactational;Adult
+LE;Egg laying;Adult
+LP;Larva-pupa;Mid
+LR;Prolarva;Early
+LV;Larva;Early
+MA;Mature;Adult
+MD;Mature dormant;Adult
+ME;Megalopa;Mid
+MG;Male gametophyte;
+ML;Morula;Early
+MN;Mid-neurula;Early
+MO;Molt;Mid
+MX;Multiple;
+MY;Mysis;Early
+NB;Newborn;Mid
+ND;Naiad;Mid
+NE;Neonate;Mid
+NH;New;Mid
+NL;Neurula;Early
+NOINT;Not intact;
+NR;Not reported;
+NU;Nauplii;Early
+NY;Nymph;Mid
+OO;Oocyte;Early
+PA;Parr;Mid
+PB;Mature;
+PC;Pre-hatch;Early
+PD;Pre-molt;Mid
+PE;Post-emergence;
+PG;Post-spawning;
+PH;Mature;
+PHT;Post-hatch;Mid
+PI;Post-molt;
+PJ;Pre-;Adult
+PK;Post-smolt;Adult
+PL;Pullet;Mid
+PN;Post-nauplius;Early
+PO;Pollen;
+PP;Postpartum;Adult
+PPU;Prepupal;Early
+PQ;Pre-larva;Early
+PRB;Prebloom;
+PS;Pre-smolt;Mid
+PT;Protolarvae;Early
+PU;Pupa;Mid
+PV;Post-larva;Mid
+PW;Pre-spawning;
+PY;Post-embryo;
+PZ;Protozoea;Early
+RC;Rooted cuttings;
+RH;Rhizome;
+RP;Mature reproductive;Adult
+RST;Rootstock;
+SA;Subadult;Mid
+SB;Shoot;
+SC;Yolk sac larvae;Early
+SCS;Senescence;Adult
+SD;Seed;Early
+SE;Scape elongation;
+SF;Sac fry;Early
+SG;Mature;
+SI;Sexually immature;Mid
+SL;Seedling;
+SM;Sexually mature;Adult
+SMT;Smolt;Mid
+SN;Sapling;
+SO;Sporeling;
+SP;Sperm;Early
+SR;Spore;Early
+ST;Spat;Mid
+SU;Swim-up;Mid
+SW;Spawning;Adult
+SY;Stationary growth phase;
+TA;Tadpole;Mid
+TC;Tissue culture callus;
+TLS;Tiller stage;
+TU;Tuber;
+TZ;Trophozoite;
+UY;Underyearling;Mid
+VE;Veliger;Early
+VG;Mature vegetative;
+VI;Virgin;Adult
+WN;Weanling;Mid
+YA;Young adult;Adult
+YE;Yearling;
+YO;Young;Mid
+YY;Young of year;Mid
+ZO;Zoea;Early
+ZS;Zygospore;Early
+ZY;Zygote;Early
